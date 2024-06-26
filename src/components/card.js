@@ -3,7 +3,7 @@ export const cardTemplate = document.querySelector("#card-template").content;
 
 
 // Создание карточки
-export function createCard (cardData, deleteCard, imageOnClick, likeCard) {
+export function createCard (cardData, deleteCard, handleImageClick, likeCard) {
     const card = cardTemplate.querySelector('.card').cloneNode(true);
     const deleteButton = card.querySelector('.card__delete-button');
     const likeButton = card.querySelector('.card__like-button');
@@ -26,7 +26,7 @@ export function createCard (cardData, deleteCard, imageOnClick, likeCard) {
     likeButton.addEventListener('click', () => likeCard(likeButton));
       
     // Открытие модального окна по клику
-    cardImage.addEventListener('click', () => imageOnClick(cardData));
+    cardImage.addEventListener('click', () => handleImageClick(cardData));
       
     return card;
   };
@@ -41,3 +41,4 @@ export function likeCard (button) {
 export function deleteCard(item) {
   item.remove();
 };
+

@@ -1,7 +1,17 @@
 /// Открытие модального окна
 export function openPopup(popup) {
-  popup.classList.add('popup_is-opened');
+  // Добавление класса для анимации
+  popup.classList.add("popup_is-animated");
+
+  // Использование setTimeout для плавного открытия
+  setTimeout(() => {
+    popup.classList.add("popup_is-opened");
+  }, 1); // Минимальная задержка для начала анимации
+
+  // Обработчик клика для закрытия модального окна по оверлею
   popup.addEventListener('click', closeOverlay);
+
+  // Обработчик нажатия клавиши для закрытия модального окна по Escape
   document.addEventListener('keydown', closeEscape);
 };
 
