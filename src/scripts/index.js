@@ -97,9 +97,5 @@ closeButtons.forEach((button) => {
   button.addEventListener('click', () => {
     // Закрытие модального окна
     closePopup(popup);
-    // Если это модальное окно редактирования профиля, сбросим форму
-    if (popup === popupEditProfile) {
-      popupEditForm.reset();
-    }
   });
 });
