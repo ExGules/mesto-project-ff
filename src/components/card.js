@@ -1,4 +1,4 @@
-import { likeCard, unlikeCard, removeCard } from "./api"; 
+import { likeCard, unlikeCard, removeCard } from "../components/api.js"; 
 //Темплейт карточки 
 const cardTemplate = document.querySelector('#card-template').content; 
 
