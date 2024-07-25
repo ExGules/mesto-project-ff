@@ -23,7 +23,6 @@ function closePopupEsc(evt) {
 //функция закрытия попапа на оверлей
 function closePopupOverlay(evt) {
   if (evt.target === evt.currentTarget) {
-    const openedPopup = document.querySelector('.popup_is-opened');
-    closePopup(openedPopup);
+    closePopup(evt.currentTarget);
   }
 }

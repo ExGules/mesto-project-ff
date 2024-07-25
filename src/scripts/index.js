@@ -135,7 +135,7 @@ changeAvatarForm.addEventListener('submit', function(evt) {
   }) 
 }) 
  
-//////////////////////////////////////////////////////////////////////// 
+
 //валидация для форм 
 const profileForm = document.querySelector('.edit_profile_form'); 
 const placeForm = document.querySelector('.new_place_form'); 
@@ -151,9 +151,6 @@ const validationConfig = {
 
 enableValidation(validationConfig); 
  
- 
- 
-//////////////////////////////////////////////////////////////////////// 
 //запросы к серверу 
  
 Promise.all([loadUserInfo(), loadCards()]) 
