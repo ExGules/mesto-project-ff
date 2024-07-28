@@ -39,10 +39,7 @@ const config = {
   export function saveProfileData(profileName, profileDescription) {
     return fetch(`${config.baseUrl}/users/me`, {
       method: 'PATCH',
-      headers: {
-        authorization: config.headers.authorization,
-        'Content-Type': 'application/json'
-      },
+      headers: config.headers,
       body: JSON.stringify({
         name: `${profileName}`,
         about: `${profileDescription}`
@@ -55,10 +52,7 @@ const config = {
   export function addCard(cardName, cardLink) {
     return fetch(`${config.baseUrl}/cards`, {
       method: 'POST',
-      headers: {
-        authorization: config.headers.authorization,
-        'Content-Type': 'application/json'
-      },
+      headers: config.headers,
       body: JSON.stringify({
         name: `${cardName}`,
         link: `${cardLink}`
@@ -104,10 +98,7 @@ const config = {
   export function changeAvatar(url) {
     return fetch(`${config.baseUrl}/users/me/avatar`, {
       method: 'PATCH',
-      headers: {
-        authorization: config.headers.authorization,
-        'Content-Type': 'application/json'
-      },
+      headers: config.headers,
       body: JSON.stringify({
         avatar: `${url}`
       })
